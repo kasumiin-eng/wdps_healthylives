@@ -1,0 +1,17 @@
+@mixin container-slim-width() {
+  @include _media-min(lg) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $one-column-slim-max-width;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@mixin content-alignment {
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - #{ $editor-gutter } * 2);
+  max-width: 1280px; // for IE11
+  max-width: var(--wp-block-width);
+}

@@ -1,0 +1,14 @@
+@mixin alignfull() {
+  $body-margin-left: 0;
+  margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+  margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+  margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
+  margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
+  width: auto;
+  max-width: none;
+
+  table {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
